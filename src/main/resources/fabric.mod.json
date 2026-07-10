@@ -1,11 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "acid-client",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for Meteor Client addons.",
+  "name": "Acid Client",
+  "description": "Some private meteor client addon that contains skidded code.",
   "authors": [
-    "seasnail"
+    "UAU_awa",
+    "Comp4ssion",
+    "NoStrict"
   ],
   "contact": {
     "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
