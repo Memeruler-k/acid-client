@@ -1,0 +1,74 @@
+plugins {
+    id "fabric-loom" version "1.7-SNAPSHOT"
+}
+
+base {
+    archivesBaseName = project.archives_base_name
+    version = project.mod_version
+    group = project.maven_group
+}
+
+repositories {
+    maven {
+        name = "Meteor Dev Releases"
+        url = "https://maven.meteordev.org/releases"
+    }
+    maven {
+        name = "Meteor Dev Snapshots"
+        url = "https://maven.meteordev.org/snapshots"
+    }
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/acid7.accesswidener")
+}
+
+dependencies {
+    // Fabric
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    // Meteor
+    modImplementation "meteordevelopment:meteor-client:${project.meteor_version}"\
+    // https://mvnrepository.com/artifact/it.unimi.dsi/fastutil
+    implementation("it.unimi.dsi:fastutil:8.5.15")
+    // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.1.20")
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation("org.json:json:20250107")
+    // https://mvnrepository.com/artifact/org.apache.clerezza.ext/org.json.simple
+    implementation("org.apache.clerezza.ext:org.json.simple:0.4")
+    // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+}
+
+tasks {
+    processResources {
+        def propertyMap = [
+            "version"   : project.version,
+            "mc_version": project.minecraft_version,
+        ]
+
+        filesMatching("fabric.mod.json") {
+            expand(propertyMap)
+        }
+    }
+
+    jar {
+        from("LICENSE") {
+            rename { "${it}_${project.base.archivesBaseName}" }
+        }
+    }
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        it.options.encoding = "UTF-8"
+        it.options.release = 21
+    }
+}

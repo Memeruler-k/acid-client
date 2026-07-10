@@ -1,0 +1,92 @@
+{
+  "keypress": {
+    "sounds": [
+      "acid:keypress"
+    ]
+  },
+  "keyrelease": {
+    "sounds": [
+      "acid:keyrelease"
+    ]
+  },
+  "uwu": {
+    "sounds": [
+      "acid:uwu"
+    ]
+  },
+  "disable": {
+    "sounds": [
+      "acid:disable"
+    ]
+  },
+  "enable": {
+    "sounds": [
+      "acid:enable"
+    ]
+  },
+  "moan1": {
+    "sounds": [
+      "acid:moan1"
+    ]
+  },
+  "moan2": {
+    "sounds": [
+      "acid:moan2"
+    ]
+  },
+  "moan3": {
+    "sounds": [
+      "acid:moan3"
+    ]
+  },
+  "moan4": {
+    "sounds": [
+      "acid:moan4"
+    ]
+  },
+  "skeet": {
+    "sounds": [
+      "acid:skeet"
+    ]
+  },
+  "orthodox": {
+    "sounds": [
+      "acid:orthodox"
+    ]
+  },
+  "boolean": {
+    "sounds": [
+      "acid:boolean"
+    ]
+  },
+  "scroll": {
+    "sounds": [
+      "acid:scroll"
+    ]
+  },
+  "swipein": {
+    "sounds": [
+      "acid:swipein"
+    ]
+  },
+  "swipeout": {
+    "sounds": [
+      "acid:swipeout"
+    ]
+  },
+  "pmsound": {
+    "sounds": [
+      "acid:pmsound"
+    ]
+  },
+  "rifk": {
+    "sounds": [
+      "acid:rifk"
+    ]
+  },
+  "cutie": {
+    "sounds": [
+      "acid:cutie"
+    ]
+  }
+}

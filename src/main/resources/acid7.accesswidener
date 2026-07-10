@@ -1,0 +1,10 @@
+accessWidener	v1	named
+accessible class net/minecraft/network/packet/c2s/play/PlayerInteractEntityC2SPacket$InteractType
+accessible method net/minecraft/client/world/ClientWorld getPendingUpdateManager ()Lnet/minecraft/client/network/PendingUpdateManager;
+accessible field net/minecraft/client/network/ClientPlayerEntity lastSprinting Z
+accessible method net/minecraft/client/network/ClientPlayerInteractionManager sendSequencedPacket (Lnet/minecraft/client/world/ClientWorld;Lnet/minecraft/client/network/SequencedPacketCreator;)V
+accessible method net/minecraft/entity/LivingEntity tryUseTotem (Lnet/minecraft/entity/damage/DamageSource;)Z
+accessible field net/minecraft/entity/TrackedPosition pos Lnet/minecraft/util/math/Vec3d;
+accessible field net/minecraft/entity/LivingEntity lastDamageTaken F
+accessible field net/minecraft/block/AbstractBlock$AbstractBlockState shapeCache Lnet/minecraft/block/AbstractBlock$AbstractBlockState$ShapeCache;
+accessible field net/minecraft/block/AbstractBlock$AbstractBlockState$ShapeCache isFullCube Z

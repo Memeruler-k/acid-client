@@ -1,0 +1,248 @@
+%!Adobe-FontList 1.24
+%Locale:0x804
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Exo-Light
+FamilyName:Exo
+StyleName:Light
+FullName:Exo Light
+MenuName:Exo
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Download\meteor-addon-template-master\src\main\resources\assets\acid\Font\exo_light.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:98124
+FileModTime:347130062
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Exo Light
+NameArray:0,Win,1,Exo
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Exo-Medium
+FamilyName:Exo
+StyleName:Medium
+FullName:Exo Medium
+MenuName:Exo
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Download\meteor-addon-template-master\src\main\resources\assets\acid\Font\exo_medium.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:98136
+FileModTime:347130062
+WeightClass:500
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Exo Medium
+NameArray:0,Win,1,Exo
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Exo-Regular
+FamilyName:Exo
+StyleName:Regular
+FullName:Exo Regular
+MenuName:Exo
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Download\meteor-addon-template-master\src\main\resources\assets\acid\Font\exo_regular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:93848
+FileModTime:347130062
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Exo Regular
+NameArray:0,Win,1,Exo
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Exo-DemiBold
+FamilyName:Exo
+StyleName:DemiBold
+FullName:Exo DemiBold
+MenuName:Exo
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:E:\Download\meteor-addon-template-master\src\main\resources\assets\acid\Font\exo_semibold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:96740
+FileModTime:347130062
+WeightClass:600
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Exo DemiBold
+NameArray:0,Win,1,Exo
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GeosansLight
+FamilyName:GeosansLight
+StyleName:Regular
+FullName:GeosansLight
+MenuName:GeosansLight
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Download\meteor-addon-template-master\src\main\resources\assets\acid\Font\geosans_light.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:60072
+FileModTime:347130062
+WeightClass:500
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,GeosansLight
+NameArray:0,Win,1,GeosansLight
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GeosansLight-Oblique
+FamilyName:GeosansLight
+StyleName:Medium Italic
+FullName:GeosansLight-Oblique
+MenuName:GeosansLight
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:E:\Download\meteor-addon-template-master\src\main\resources\assets\acid\Font\geosans_light_oblique.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:62196
+FileModTime:347130062
+WeightClass:500
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,GeosansLight-Oblique
+NameArray:0,Win,1,GeosansLight
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:L2-Light
+FamilyName:L2 Light
+StyleName:Light
+FullName:L2-Light
+MenuName:L2 Light
+StyleBits:0
+FamilyNameNative:L2 Light
+StyleNameNative:Light
+FullNameNative:L2 Light Light
+WritingScript:Japanese
+OutlineFileName:E:\Download\meteor-addon-template-master\src\main\resources\assets\acid\Font\ll_light.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:698668
+FileModTime:347130062
+WeightClass:200
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,L2 Light
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:L2-Regular
+FamilyName:L2 Regular
+StyleName:Regular
+FullName:L2-Regular
+MenuName:L2 Regular
+StyleBits:0
+FamilyNameNative:L2 Regular
+StyleNameNative:Regular
+FullNameNative:L2 Regular Regular
+WritingScript:Japanese
+OutlineFileName:E:\Download\meteor-addon-template-master\src\main\resources\assets\acid\Font\ll_regular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:695364
+FileModTime:347130062
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,L2 Regular
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:L2-Semibold
+FamilyName:L2 Semibold
+StyleName:Semibold
+FullName:L2-Semibold
+MenuName:L2 Semibold
+StyleBits:0
+FamilyNameNative:L2 Semibold
+StyleNameNative:Semibold
+FullNameNative:L2 Semibold Semibold
+WritingScript:Japanese
+OutlineFileName:E:\Download\meteor-addon-template-master\src\main\resources\assets\acid\Font\ll_semibold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:690820
+FileModTime:347130062
+WeightClass:500
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,L2 Semibold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Montserrat-Regular
+FamilyName:Montserrat
+StyleName:Regular
+FullName:Montserrat Regular
+MenuName:Montserrat
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Download\meteor-addon-template-master\src\main\resources\assets\acid\Font\montserrat.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:9779720
+FileModTime:1734253529
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Montserrat
+%EndFont
+

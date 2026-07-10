@@ -1,0 +1,222 @@
+package dev.abstr3act.addon.utils.math;
+
+import dev.abstr3act.addon.utils.abnormally.BlockUtil;
+import meteordevelopment.meteorclient.MeteorClient;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
+import org.jetbrains.annotations.NotNull;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.concurrent.ThreadLocalRandom;
+
+public final class MathUtility {
+    public static double random(double min, double max) {
+        return ThreadLocalRandom.current().nextDouble() * (max - min) + min;
+    }
+
+    public static float random(float min, float max) {
+        return (float) (Math.random() * (max - min) + min);
+    }
+
+    public static long randomLong(float min, float max) {
+        return (long) (Math.random() * (max - min) + min);
+    }
+
+    public static double getDistanceSq(double x, double y, double z) {
+        double d0 = MeteorClient.mc.player.getX() - x;
+        double d1 = MeteorClient.mc.player.getY() - y;
+        double d2 = MeteorClient.mc.player.getZ() - z;
+        return d0 * d0 + d1 * d1 + d2 * d2;
+    }
+
+    public static double getDistance(double x1, double y1, double z1, double x2, double y2, double z2) {
+        double d0 = x1 - x2;
+        double d1 = y1 - y2;
+        double d2 = z1 - z2;
+        return Math.sqrt(d0 * d0 + d1 * d1 + d2 * d2);
+    }
+
+    public static double getSqrDistance(double x1, double y1, double z1, double x2, double y2, double z2) {
+        double d0 = x1 - x2;
+        double d1 = y1 - y2;
+        double d2 = z1 - z2;
+        return Math.sqrt(d0 * d0 + d1 * d1 + d2 * d2);
+    }
+
+    public static float round(float value) {
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        return bd.floatValue();
+    }
+
+    public static double round(double value) {
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
+
+    public static double getDistanceSq(Entity ent) {
+        return getDistanceSq(ent.getX(), ent.getY(), ent.getZ());
+    }
+
+    public static double roundToDecimal(double n, int point) {
+        if (point == 0) {
+            return Math.floor(n);
+        } else {
+            double factor = Math.pow(10.0, point);
+            return Math.round(n * factor) / factor;
+        }
+    }
+
+    @NotNull
+    public static Vec3d getStraightVec(@NotNull Vec3d fromVec, @NotNull Vec3d toVec, double range) {
+        Vec3d vec = getVelocity(fromVec, toVec, range);
+        return fromVec.add(vec);
+    }
+
+    @NotNull
+    public static Vec3d getVelocity(@NotNull Vec3d fromVec, @NotNull Vec3d toVec, double speedPerTick) {
+        Vec3d subtract = toVec.subtract(fromVec);
+        double dis = Math.sqrt(subtract.x * subtract.x + subtract.y * subtract.y + subtract.z * subtract.z);
+        double step = speedPerTick / dis;
+        return new Vec3d(subtract.x * step, subtract.y * step, subtract.z * step);
+    }
+
+    public static double angle(Vec3d vec3d, Vec3d other) {
+        double lengthSq = vec3d.length() * other.length();
+        if (lengthSq < 1.0E-4) {
+            return 0.0;
+        } else {
+            double dot = vec3d.dotProduct(other);
+            double arg = dot / lengthSq;
+            if (arg > 1.0) {
+                return 0.0;
+            } else {
+                return arg < -1.0 ? 180.0 : Math.acos(arg) * 180.0 / Math.PI;
+            }
+        }
+    }
+
+    public static Vec3d fromTo(Vec3d from, double x, double y, double z) {
+        return fromTo(from.x, from.y, from.z, x, y, z);
+    }
+
+    public static float lerp(float f, float st, float en) {
+        return st + f * (en - st);
+    }
+
+    public static Vec3d fromTo(double x, double y, double z, double x2, double y2, double z2) {
+        return new Vec3d(x2 - x, y2 - y, z2 - z);
+    }
+
+    public static float rad(float angle) {
+        return (float) (angle * Math.PI / 180.0);
+    }
+
+    public static int clamp(int num, int min, int max) {
+        return num < min ? min : Math.min(num, max);
+    }
+
+    public static float clamp(float num, float min, float max) {
+        return num < min ? min : Math.min(num, max);
+    }
+
+    public static double clamp(double num, double min, double max) {
+        return num < min ? min : Math.min(num, max);
+    }
+
+    public static float sin(float value) {
+        return MathHelper.sin(value);
+    }
+
+    public static float cos(float value) {
+        return MathHelper.cos(value);
+    }
+
+    public static float wrapDegrees(float value) {
+        return MathHelper.wrapDegrees(value);
+    }
+
+    public static double wrapDegrees(double value) {
+        return MathHelper.wrapDegrees(value);
+    }
+
+    public static double square(double input) {
+        return input * input;
+    }
+
+    public static double round(double value, int places) {
+        BigDecimal bd = BigDecimal.valueOf(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
+
+    public static float wrap(float angle) {
+        float wrappedAngle = angle % 360.0F;
+        if (wrappedAngle >= 180.0F) {
+            wrappedAngle -= 360.0F;
+        }
+
+        if (wrappedAngle < -180.0F) {
+            wrappedAngle += 360.0F;
+        }
+
+        return wrappedAngle;
+    }
+
+    public static Vec3d direction(float yaw) {
+        return new Vec3d(Math.cos(degToRad(yaw + 90.0F)), 0.0, Math.sin(degToRad(yaw + 90.0F)));
+    }
+
+    public static float round(float value, int places) {
+        if (places < 0) {
+            throw new IllegalArgumentException();
+        } else {
+            BigDecimal bd = BigDecimal.valueOf(value);
+            bd = bd.setScale(places, RoundingMode.FLOOR);
+            return bd.floatValue();
+        }
+    }
+
+    public static float round2(double value) {
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        return bd.floatValue();
+    }
+
+    public static <K, V extends Comparable<? super V>> LinkedHashMap<K, V> sortByValue(Map<K, V> map, boolean descending) {
+        List<Entry<K, V>> list = new LinkedList<>(map.entrySet());
+        if (descending) {
+            list.sort(Entry.comparingByValue(Comparator.reverseOrder()));
+        } else {
+            list.sort(Entry.comparingByValue());
+        }
+
+        LinkedHashMap<K, V> result = new LinkedHashMap<>();
+
+        for (Entry<K, V> entry : list) {
+            result.put(entry.getKey(), entry.getValue());
+        }
+
+        return result;
+    }
+
+    public static double degToRad(double deg) {
+        return deg * (float) (Math.PI / 180.0);
+    }
+
+    private Vec3d getFarVec3d(Vec3d fromVec, Vec3d toVec, double distance) {
+        for (double step = distance > 0.0 ? -1.0 : 1.0; distance != 0.0; distance += step) {
+            Vec3d stepVec = getStraightVec(fromVec, toVec, distance);
+            if (BlockUtil.checkCanMove(fromVec, stepVec) && BlockUtil.checkCanMove(stepVec, fromVec)) {
+                return stepVec;
+            }
+        }
+
+        return fromVec;
+    }
+}
